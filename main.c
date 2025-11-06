@@ -3,13 +3,12 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
+void main(void) {
+    char src[] = "The worst things to eat before you sleep";
+    char dst[100];
 
-int main(void) {
-    char code1 = 'A';
-    int code2 = 65;
+    strcpy(dst, src); // <--- 문자열 복사 (dst = 대상, src = 원본)
 
-    printf("code1 = %c, (%d)\n", code1, code1);
-    printf("code2 = %c, (%d)\n", code2, code2);
-    return 0;
+    printf("copied string : %s\n", dst);
 }
 
