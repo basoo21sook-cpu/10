@@ -1,26 +1,20 @@
 #include <stdio.h>
 
 int main(void) {
-    FILE *fp;       
-    char word[100]; 
-    int i;
+    FILE *fp;
+    char line[100];
 
-  
-    fp = fopen("sample.txt", "w");
-
-    if (fp == NULL) { 
+    fp = fopen("sample.txt", "r");
+    if (fp == NULL) {
         printf("파일을 열 수 없습니다.\n");
         return 1;
     }
 
-    for (i = 0; i < 3; i++) {
-        printf("input a word: ");
-        scanf("%s", word);
-        fprintf(fp, "%s\n", word); 
+    while (fgets(line, sizeof(line), fp) != NULL) {
+        printf("%s", line);
     }
 
-    fclose(fp); 
+    fclose(fp);
     return 0;
 }
-
 
