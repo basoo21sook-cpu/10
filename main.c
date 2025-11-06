@@ -1,25 +1,23 @@
-
 #include <stdio.h>
-#include <stdlib.h>
-
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(void) {
-    FILE *fp;        
-    char input[100]; 
-    int i;
+    int i = 0;
+    char str[4];
 
-   //fopen
-    fp = fopen("sample.txt", "w");
-	
-	for (i = 0; i < 3; i++) {
-	//fprintf 
-    printf("input a word: ");
-    scanf("%s", input);
-    fprintf(fp, "%s\n", input); 
-}
-	//fclose
-    fclose(fp); 
+    str[0] = 'a';
+    str[1] = 'b';
+    str[2] = 'c';
+    str[3] = '\0';   
+
+  
+    printf("%s\n", str);
+
+   
+    while (str[i] != '\0') {
+        printf("%c", str[i]);
+        i++;
+    }
+
     return 0;
 }
 
